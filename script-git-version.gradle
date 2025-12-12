@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            name = 'ajoberstar-backup'
+            url = 'https://ajoberstar.org/bintray-backup/'
+        }
+    }
+    dependencies {
+        classpath 'org.ajoberstar.grgit:grgit-gradle:4.1.1'
+    }
+}
+
+import org.ajoberstar.grgit.Grgit
+
+ext {
+    git = Grgit.open(currentDir: projectDir)
+    gitVersionName = git.describe(tags:true)
+    gitVersionCode = git.tag.list().size() + 6 // Manual increment for between tagged versions
+    gitVersionCodeTime = git.head().time
+}
+
+task printVersion()  {
+    doLast {
+        println("Version Name: $gitVersionName")
+        println("Version Code: $gitVersionCode")
+        println("Version Code Time: $gitVersionCodeTime")
+    }
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pay_types">
+        <item>@string/pay_type_select_one</item>
+        <item>@string/pay_type_cash</item>
+        <item>@string/pay_type_mobile_phone</item>
+        <item>@string/pay_type_bank_transfer</item>
+    </array>
+    <array name="pay_types_enum">
+        <item/>
+        <item>C</item>
+        <item>M</item>
+        <item>B</item>
+    </array>
+    <array name="gender">
+        <item>@string/gender_select_one</item>
+        <item>@string/gender_male</item>
+        <item>@string/gender_female</item>
+    </array>
+    <array name="marital_status">
+        <item>@string/marital_status_select_one</item>
+        <item>@string/marital_status_single</item>
+        <item>@string/marital_status_married</item>
+        <item>@string/marital_status_divorced</item>
+        <item>@string/marital_status_widowed</item>
+    </array>
+    <array name="education">
+        <item>@string/education_select_one</item>
+        <item>@string/education_primary</item>
+        <item>@string/education_secondary</item>
+        <item>@string/education_tertiary</item>
+    </array>
+    <array name="yes_no">
+        <item>@string/yes_no_select_one</item>
+        <item>@string/yes_no_yes</item>
+        <item>@string/yes_no_no</item>
+    </array>
+    <array name="type_of_id">
+        <item>@string/type_of_id_select_one</item>
+        <item>@string/type_of_id_identity_card</item>
+        <item>@string/type_of_id_passport</item>
+        <item>@string/type_of_id_elector_card</item>
+        <item>@string/type_of_id_birth_driving_license</item>
+        <item>@string/type_of_id_birth_certificate</item>
+    </array>
+</resources>

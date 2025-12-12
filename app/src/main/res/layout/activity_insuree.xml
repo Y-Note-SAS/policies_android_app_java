@@ -1,0 +1,344 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootInsuree"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/cardPhoto"
+                android:layout_width="185dp"
+                android:layout_height="142dp"
+                android:background="@drawable/card_bg"
+                android:padding="16dp">
+
+                <ImageButton
+                    android:id="@+id/btnAddPhoto"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/blue_circle"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_add"
+                    app:tint="#FFFFFF" /> <!-- Le plus devient blanc -->
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="@string/insurance_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/CHFID"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_field"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:paddingLeft="10dp"
+                    android:tag="CHFID" />
+
+                <TextView
+                    android:text="@string/birth_date"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/DOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/rounded_field"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:paddingLeft="10dp"
+                    android:tag="DOB" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <TextView android:text="@string/other_names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/OtherNames"
+                android:background="@drawable/rounded_field"
+                android:tag="OtherNames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"/>
+
+            <TextView android:text="@string/last_name"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/LastName"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="LastName"/>
+
+            <TextView android:text="@string/phone"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/Phone"
+                android:background="@drawable/rounded_field"
+                android:tag="Phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:padding="12dp"/>
+
+            <TextView android:text="@string/email"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/Email"
+                android:background="@drawable/rounded_field"
+                android:tag="Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"/>
+
+            <TextView android:text="@string/current_address"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/CurrentAddress"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="top"
+                android:lines="3"
+                android:maxLength="200"
+                android:padding="12dp"
+                android:tag="CurrentAddress"/>
+
+            <TextView android:text="@string/identification_number"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/IdentificationNumber"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="IdentificationNumber"/>
+
+            <TextView android:text="@string/vulnerability"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/Vulnerability"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="Vulnerability"/>
+
+            <TextView android:text="@string/gender"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/Gender"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="Gender"/>
+
+            <TextView android:text="@string/marital_status"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/MaritalStatus"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="MaritalStatus"/>
+
+            <TextView android:text="@string/education"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/Education"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="Education"/>
+
+            <TextView android:text="@string/beneficiary_card"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/CardIssued"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="CardIssued"/>
+
+            <TextView android:text="@string/type_of_id"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/TypeOfId"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="TypeOfId"/>
+
+            <TextView android:text="@string/current_region"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/CurRegion"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:tag="CurRegion"/>
+
+            <TextView android:text="@string/current_district"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/CurDistrict"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:tag="CurDistrict"/>
+
+            <TextView android:text="@string/current_municipality"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/CurWard"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:tag="CurWard"/>
+
+            <TextView android:text="@string/current_village"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/CurVillage"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:tag="CurVillage"/>
+
+            <TextView android:text="@string/fsp_region"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/FSPRegion"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:tag="FSPRegion"/>
+
+            <TextView android:text="@string/fsp_district"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/FSPDistrict"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:tag="FSPDistrict"/>
+
+            <TextView android:text="@string/fsp_category"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/FSPCategory"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:tag="FSPCategory"/>
+
+            <TextView android:text="@string/hf_id"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/HFID"
+                android:background="@drawable/rounded_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                android:padding="12dp"
+                android:tag="HFID"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:tag="btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>
